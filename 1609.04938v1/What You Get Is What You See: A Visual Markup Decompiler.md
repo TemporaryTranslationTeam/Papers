@@ -64,7 +64,7 @@ Optical character recognition (OCR) 技术一般被用来从图像中识别自�
 
 注意力的使用额外提供了一种从生成的标记到原始源图像的对齐 （见图1）。
 
-![图 1](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-28%2023.08.52.png)
+![图 1](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-09-28 23.08.52.png)
 （图 1：模型生成数学标记的例子。此模型基于输入图像 x 一次生成一个 LaTeX 符号 $y$。灰线突出显示在 CNN $V$ 和 RNN 解码器 $V$ 之后 $H ′ × V ′$ 的网格特征。虚线表示 每个单词$\alpha$ 的质量中心(仅显示非结构性单词)。红色单元格显示了 the relative attention for the last token。详见：[http: //lstm.seas.harvard.edu/latex/](http: //lstm.seas.harvard.edu/latex/) 以获取测试集上此可视化的完整交互式版本。）
 
 
@@ -126,7 +126,7 @@ The supervised task is to learn to approximately in- vert the compile function u
 我们描述了模型的更多细节。
 
 
-![图 2](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-30%2000.02.59.png)
+![图 2](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-09-30 00.02.59.png)
 (图 2：WYGIWYS 的网络结构。给定输入图像，一个 CNN 会被用来提取数据特性，然后对于最终特征图中的每一行，我们利用 RNN 解码器解码。被解码的特征由一个具有视觉注意力机制的 RNN 解码器处理，最终输出。为了明确，我们仅展示第一行的 RNN 编码和在时间步骤 $t$ 的解码)
 
 
@@ -237,7 +237,7 @@ HTML 标记使用简单的上下文无关法确定。
 
 图3展示了一个从数据集中取样的示例片段。
 
-![图3](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-03%2015.04.15.png)
+![图3](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-10-03 15.04.15.png)
 (图3：示例网页图像和它相应的 HTML 片段。)
 
 
@@ -297,7 +297,7 @@ LaTeX 公式的范围在 38 到 997 个字符之间，平均值为 118，中位�
 
 注意这只会改变训练数据，不会改变模型本身。
 
-![表1](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-03%2019.39.15.png)
+![表1](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-10-03 19.39.15.png)
 (表1：在规范化模式下应用于 LaTeX 抽象语法树的预处理转换。这些转换大多是安全的，尽管一些极端情况会对输出有微小影响。)
 
 ## Experimental Setup
@@ -350,7 +350,7 @@ LaTeX 公式的范围在 38 到 997 个字符之间，平均值为 118，中位�
 
 CNN 规范总结在表2中。
 
-![表2](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-03%2020.17.53.png)
+![表2](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-10-03 20.17.53.png)
 (Table 2: CNN specification. ‘Conv‘: convolution layer, ‘Pool: max-pooling layer. ‘c’: number of filters, ‘k’: kernel size, ‘s’: stride size, ‘p’: padding size, ‘po’: , ‘bn’: with batch normalization. The sizes are in order (height, width).)
 
 模型对所有 RNN 使用单层 LSTM。
@@ -397,7 +397,7 @@ RNN 编码器的隐藏状态大小为 256，解码器 RNN 的大小为 512，tok
 为了便于批量处理，we group images into similar sizes 并用空白填充。[^8]
 
 
-![图4](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-04%2020.31.38.png)
+![图4](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-10-04 20.31.38.png)
 （Figure 4: Typical errors in the HTML dataset. Left to right: 1st ground truth, 1st predicted, 2nd ground truth, 2nd predicted.）
 
 
@@ -412,7 +412,7 @@ RNN 编码器的隐藏状态大小为 256，解码器 RNN 的大小为 512，tok
 
 HTML 数据集的初始实验如表4所示。
 
-![表4](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-04%2019.49.04.png)
+![表4](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-10-04 19.49.04.png)
 (Table 4: Web Page-to-HTML results. Reports the training perplexity, test perplexity, as well as exact match score on test set.)
 
 
@@ -429,7 +429,7 @@ HTML 数据集的初始实验如表4所示。
 
 数学表达式的主要实验结果在表3中给出。
 
-![表3](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-04%2019.48.57.png)
+![表3](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-10-04 19.48.57.png)
 (Table 3: Main experimental results on the IM2LATEX-100K dataset. Reports the BLEU score compared to the tokenized formulas (BLEU (tok)), and the BLEU score compared to the normalized formulas (BLEU (norm)), column-wise image edit distance, exact match, and exact match without whitespace columns.)
 
 
@@ -450,7 +450,7 @@ HTML 数据集的初始实验如表4所示。
 
 为了更好地理解模型各部分的贡献，我们进行了消除不同方面的消融实验，如表5所示。
 
-![表5](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-04%2019.49.11.png)
+![表5](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-10-04 19.49.11.png)
 (Table 5: Image-to-LaTeX ablation experiments. Compares simple LM approaches and versions of the full model with different encoders.)
 
 
@@ -469,7 +469,7 @@ HTML 数据集的初始实验如表4所示。
 
 表6 中显示了模型的主要 non-spacing errors。
 
-![表6](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-04%2021.01.41.png)
+![表6](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-10-04 21.01.41.png)
 (Table 6: Most common presentation-affecting errors in the LaTeX norm validation dataset.)
 
 
@@ -481,7 +481,7 @@ HTML 数据集的初始实验如表4所示。
 
 通常，表达式的大多数结构都会被保留，但会出现一个或两个符号识别错误。
 
-![图5](media/15368398759957/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-04%2021.01.48.png)
+![图5](http://p4uro3cva.bkt.clouddn.com/屏幕快照 2018-10-04 21.01.48.png)
 (Figure 5: Typical errors in the LaTeX dataset. We show the operations needed to get ground truth from the rendered pre- dictions. Red denotes add operations and blue denotes delete operations.)
 
 
@@ -546,4 +546,12 @@ Xu, K.; Ba, J.; Kiros, R.; Cho, K.; Courville, A.; Salakhudinov, R.; Zemel, R.; 
 [^7]: https://github.com/harvardnlp/seq2seq-attn
 
 [^8]: Width-Height groups used are (120,50), (160,40), (200,40), (200,50), (240,40), (240,50), (280,40), (280,50), (320,40), (320,50), (360,40), (360,50), (360,60), (360, 100), (400,50), (400,160), (500,100)。
+
+
+
+
+
+
+
+
 
